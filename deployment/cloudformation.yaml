@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
-Description: AWS CloudFormation template for Amazon IVS Transcribe demo - suffix <RANDOM_SUFFIX>
+Description: AWS CloudFormation template for Amazon IVS Transcribe demo - suffix 6hy7gr
 
 Parameters:
  
@@ -26,93 +26,93 @@ Parameters:
   LambdaOnConnectFunctionName:
     Type: String
     Description: Name of the lambda-on-connect function
-    Default: ivs-transcribe-demo-on-connect-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-on-connect-6hy7gr
 
   LambdaOnDisconnectFunctionName:
     Type: String
     Description: Name of the lambda-on-disconnect function
-    Default: ivs-transcribe-demo-on-disconnect-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-on-disconnect-6hy7gr
 
   LambdaSendTranscriptionFunctionName:
     Type: String
     Description: Name of the lambda-send-transcription function
-    Default: ivs-transcribe-demo-send-transcription-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-send-transcription-6hy7gr
 
   LambdaSendTranscriptionChunksFunctionName:
     Type: String
     Description: Name of the lambda-send-transcription-chunks function
-    Default: ivs-transcribe-demo-send-transcription-chunks-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-send-transcription-chunks-6hy7gr
 
   LambdaDeleteStaleConnectionFunctionName:
     Type: String
     Description: Name of the lambda-delete-stale-connection function
-    Default: ivs-transcribe-demo-delete-stale-connection-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-delete-stale-connection-6hy7gr
 
   # ECS resources parameters
   ECSClusterName:
     Type: String
     Description: Name of the ECS Cluster
-    Default: ivs-transcribe-demo-cluster-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-cluster-6hy7gr
 
   StreamServiceName:
     Type: String
     Description: Name of the Stream service
-    Default: ivs-transcribe-demo-stream-service-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-stream-service-6hy7gr
 
   TranscribeServiceName:
     Type: String
     Description: Name of the Transcribe service
-    Default: ivs-transcribe-demo-transcribe-service-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-transcribe-service-6hy7gr
 
   TranslateServiceName:
     Type: String
     Description: Name of the Translate service
-    Default: ivs-transcribe-demo-translate-service-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-translate-service-6hy7gr
 
   StreamTaskDefinitionName:
     Type: String
     Description: Name of the Stream service task definition
-    Default: ivs-transcribe-demo-stream-task-definition-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-stream-task-definition-6hy7gr
 
   TranscribeTaskDefinitionName:
     Type: String
     Description: Name of the Transcribe service task definition
-    Default: ivs-transcribe-demo-transcribe-task-definition-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-transcribe-task-definition-6hy7gr
 
   TranslateTaskDefinitionName:
     Type: String
     Description: Name of the Translate service task definition
-    Default: ivs-transcribe-demo-translate-task-definition-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-translate-task-definition-6hy7gr
 
   StreamContainerDefinitionName:
     Type: String
     Description: Name of the Stream service container definition
-    Default: ivs-transcribe-demo-stream-container-definition-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-stream-container-definition-6hy7gr
 
   TranscribeContainerDefinitionName:
     Type: String
     Description: Name of the Transcribe service container definition
-    Default: ivs-transcribe-demo-transcribe-container-definition-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-transcribe-container-definition-6hy7gr
 
   TranslateContainerDefinitionName:
     Type: String
     Description: Name of the Translate service container definition
-    Default: ivs-transcribe-demo-translate-container-definition-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-translate-container-definition-6hy7gr
 
   StreamServiceLogGroupName:
     Type: String
     Description: Name of the Stream service CloudWatch log group
-    Default: /ecs/ivs-transcribe-demo-stream-logs-<RANDOM_SUFFIX>
+    Default: /ecs/ivs-transcribe-demo-stream-logs-6hy7gr
 
   TranscribeServiceLogGroupName:
     Type: String
     Description: Name of the Transcribe service CloudWatch log group
-    Default: /ecs/ivs-transcribe-demo-transcribe-logs-<RANDOM_SUFFIX>
+    Default: /ecs/ivs-transcribe-demo-transcribe-logs-6hy7gr
 
   TranslateServiceLogGroupName:
     Type: String
     Description: Name of the Translate service CloudWatch log group
-    Default: /ecs/ivs-transcribe-demo-translate-logs-<RANDOM_SUFFIX>
+    Default: /ecs/ivs-transcribe-demo-translate-logs-6hy7gr
 
   PrivateDNSNamespaceName:
     Type: String
@@ -132,17 +132,17 @@ Parameters:
   ECRStreamRepositoryName:
     Type: String
     Description: Name of the private DNS Namespace
-    Default: ivs-transcribe-demo-stream-images-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-stream-images-6hy7gr
 
   ECRTranscribeRepositoryName:
     Type: String
     Description: Name of the private DNS Namespace
-    Default: ivs-transcribe-demo-transcribe-images-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-transcribe-images-6hy7gr
 
   ECRTranslateRepositoryName:
     Type: String
     Description: Name of the private DNS Namespace
-    Default: ivs-transcribe-demo-translate-images-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-translate-images-6hy7gr
 
   TranslateServiceTranslationsLanguageCodes:
     Type: String
@@ -152,54 +152,54 @@ Parameters:
   VocabularyConfigurationBucketName:
     Type: String
     Description: Name of the Transcribe service configuration bucket that contains the custom vocabulary and vocabulary filter
-    Default: ivs-transcribe-demo-vocabulary-config-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-vocabulary-config-6hy7gr
 
   PlayerAppBucketName:
     Type: String
     Description: Name of the Player App bucket
-    Default: ivs-transcribe-demo-player-app-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-player-app-6hy7gr
 
   LambdaFunctionsBucketName:
     Type: String
     Description: Name of the bucket that contains the Lambda functions zip files
-    Default: ivs-transcribe-demo-lambda-functions-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-lambda-functions-6hy7gr
 
   IVSChannelName:
     Type: String
     Description: Name of the IVS Channel
-    Default: ivs-transcribe-demo-channel-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-channel-6hy7grAudioLanguageCode
 
   WriterWebSocketName:
     Type: String
     Description: Name of the writer WebSocket used to send transcriptions to clients (players)
-    Default: ivs-transcribe-demo-writer-websocket-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-writer-websocket-6hy7gr
 
   ReaderWebSocketName:
     Type: String
     Description: Name of the reader WebSocket used to keep track of the client (player) connections
-    Default: ivs-transcribe-demo-reader-websocket-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-reader-websocket-6hy7gr
 
   # DynamoDB resources parameters
   DynamoDBOverlaysTableName:
     Type: String
     Description: Name of the overlays configuration table
-    Default: ivs-transcribe-demo-overlays-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-overlays-6hy7gr
 
   DynamoDBConnectionsTableName:
     Type: String
     Description: Name of the connections table
-    Default: ivs-transcribe-demo-connections-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-connections-6hy7gr
 
   # Other
   TranscribeCustomVocabularyName:
     Type: String
     Description: Name of the custom vocabulary that will be configured in Transcribe
-    Default: ivs-transcribe-demo-custom-vocabulary-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-custom-vocabulary-6hy7gr
 
   TranscribeVocabularyFilterName:
     Type: String
     Description: Name of the vocabulary filter that will be configured in Transcribe
-    Default: ivs-transcribe-demo-vocabulary-filter-<RANDOM_SUFFIX>
+    Default: ivs-transcribe-demo-vocabulary-filter-6hy7gr
 
 #Check conditions of translate
 Conditions:
@@ -578,7 +578,7 @@ Resources:
             - Name : IVS_KEY
               Value: !GetAtt IVSStreamKey.Value
             - Name : STREAM_KEY
-              Value: !Sub streamkey-${AWS::StackName}-<RANDOM_SUFFIX>
+              Value: !Sub streamkey-${AWS::StackName}-6hy7gr
           Cpu: 0
       Memory: 4096
       TaskRoleArn: !GetAtt ECSRole.Arn
@@ -649,7 +649,7 @@ Resources:
             - Name: WRITER_WEBSOCKET_API_URL
               Value: !Join [ "/", [ !GetAtt WriterWebSocket.ApiEndpoint, !Ref WriterWebSocketStage ] ]
             - Name: RTMP_INPUT
-              Value: !Sub rtmp://${StreamServiceDiscovery.Name}.${PrivateDNSNamespaceName}/ivs/streamkey-${AWS::StackName}-<RANDOM_SUFFIX>
+              Value: !Sub rtmp://${StreamServiceDiscovery.Name}.${PrivateDNSNamespaceName}/ivs/streamkey-${AWS::StackName}-6hy7gr
             - Name: KEYWORDS_TABLE_NAME
               Value: !Ref DynamoDBOverlaysTableName
             - Name: TRANSLATE_ENABLED
@@ -1026,7 +1026,7 @@ Outputs:
     Value: !Ref TranslateServiceTranslationsLanguageCodes
   
   StreamKey:
-    Value: !Sub streamkey-${AWS::StackName}-<RANDOM_SUFFIX>
+    Value: !Sub streamkey-${AWS::StackName}-6hy7gr
 
   AudioLanguageCode:
     Value: !Ref AudioLanguageCode
